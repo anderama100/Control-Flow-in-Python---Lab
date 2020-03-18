@@ -26,9 +26,13 @@ else:
 #      - What you entered is xx characters long
 # 3. Return to step 1, unless the word 'quit' was entered.
 
-ans = input('Enter a Word ')
-word = len(ans)
-print(f'The lenght of your word is {word} ')
+
+while True:
+  ans = input('Enter a Word or "quit" ')
+  word = len(ans)
+  print(f'The lenght of your word is {word} ')
+  if ans == 'quit':
+    break
 
 
 # exercise-03 Calculate Dog Years
@@ -47,6 +51,7 @@ print(f'The lenght of your word is {word} ')
 ans = int(input("Enter dog age "))
 if ans <= 2:
   dogAge = ans * 10
+  print(f"Dog age in human years is {dogAge}")
 else:
   dogAge = 20 +((ans * 7) - 14)
   print(f"Dog age in human years is {dogAge}")
